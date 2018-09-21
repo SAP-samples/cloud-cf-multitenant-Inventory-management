@@ -1,0 +1,47 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="inventorymanagementui.inventorymanagementui.controller.products" xmlns:html="http://www.w3.org/1999/xhtml">
+		<Page  class="sapUiContentPadding" title="{i18n>productsTitle}">
+		<content>
+			<Table id="idPersonlist" inset="false" items="{ path: 'products>/productList'}">
+				<columns>
+					<Column width="12em">
+						<Text text="{i18n>productColumn}"/>
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true">
+						<Text text="{i18n>supplierColumnn}"/>
+					</Column>
+					<Column minScreenWidth="Desktop" demandPopin="true" hAlign="End">
+						<Text text="{i18n>descriptionColumn}"/>
+					</Column>
+					<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+						<Text text="{i18n>priceColumn}"/>
+					</Column>
+					<Column hAlign="End">
+						<Text text="{i18n>availabilityColumn}"/>
+					</Column>
+					<Column hAlign="End">
+						<Text text="{i18n>quantityColumn}"/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<ObjectIdentifier title="{products>product_name}" text="{products>product_id}"/>
+							<Text text="{products>supplier_name}"/>
+							<Text text="{products>product_description}"/>
+							<Text text="{products>price}"/>
+							<Text text="{parts: [{path:'products>available'}], formatter:'.formatAvailabilityOption'}"/>
+							<Text text="{products>quantity}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Button text="{i18n>addProductButton}" width="125px" press="onAddProductButtonPress" type="Emphasized"/>
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>

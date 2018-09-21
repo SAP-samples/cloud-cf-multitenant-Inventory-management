@@ -1,0 +1,5 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="inventorymanagementui.inventorymanagementui.controller.landingHome" xmlns:html="http://www.w3.org/1999/xhtml">
+	<MessagePage showHeader="true" title="{i18n>homeTitle}" text="{i18n>WelcomeMessage}" enableFormattedText="true" description=""
+		icon="sap-icon://customer-and-supplier"></MessagePage>
+</mvc:View>

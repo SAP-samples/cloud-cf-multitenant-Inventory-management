@@ -1,0 +1,9 @@
+{
+	"appId": "<XS-App name goes here>",
+	"displayName": "Inventory Management App",
+	"description": "An app to manage your inventory",
+	"category": "Provider XYZ",
+	"appUrls": {
+		"onSubscription": "https://<Your back-end app URL>/callback/v1.0/tenants/{tenantId}"
+	}
+}

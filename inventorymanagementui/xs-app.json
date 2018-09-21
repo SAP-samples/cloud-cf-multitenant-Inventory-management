@@ -1,0 +1,18 @@
+{
+	"welcomeFile": "/inventorymanagementui/index.html",
+	"authenticationMethod": "route",
+	"logout": {
+		"logoutEndpoint": "/logout"
+	},
+	"routes": [{
+		"source": "^/inventorymanagementui/(.*)$",
+		"target": "$1",
+		"localDir": "webapp"
+	}, {
+		"source": "^/inventorymanagementbackend/(.*)$",
+		"target": "$1",
+		"csrfProtection": true,
+		"authenticationType": "xsuaa",
+		"destination": "inventorymanagementbackend_api"
+	}]
+}

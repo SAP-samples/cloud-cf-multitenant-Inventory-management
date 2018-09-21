@@ -1,0 +1,32 @@
+<mvc:View controllerName="inventorymanagementui.inventorymanagementui.controller.home" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:tnt="sap.tnt">
+	<App id="idAppControl">
+		<pages>
+			<Page showHeader="false">
+				<content>
+					<tnt:ToolPage id="toolPage">
+						<tnt:header>
+							<tnt:ToolHeader>
+								<Button id="sideNavigationToggleButton" icon="sap-icon://menu2" type="Transparent" press="onSideNavButtonPress">
+									<layoutData>
+										<OverflowToolbarLayoutData priority="NeverOverflow"/>
+									</layoutData>
+								</Button>
+							</tnt:ToolHeader>
+						</tnt:header>
+						<tnt:sideContent>
+							<tnt:SideNavigation expanded="true" itemSelect="onItemSelect">
+								<tnt:NavigationList items="{path: '/navigation'}">
+									<tnt:NavigationListItem text="{title}" icon="{icon}" enabled="{enabled}" expanded="{expanded}" key="{key}"></tnt:NavigationListItem>
+								</tnt:NavigationList>
+							</tnt:SideNavigation>
+						</tnt:sideContent>
+						<tnt:mainContents>
+							<App id="MainContainer"/>
+						</tnt:mainContents>
+					</tnt:ToolPage>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

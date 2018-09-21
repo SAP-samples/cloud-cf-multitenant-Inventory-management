@@ -1,0 +1,53 @@
+ID: inventorymanagementapp
+_schema-version: '2.1'
+description: A multi-tenant enabled app to manage inventory
+version: 1.0.0
+
+modules:
+  - name: inventorymanagementui
+    type: html5
+    path: inventorymanagementui
+    parameters:
+      disk-quota: 256M
+      memory: 256M
+    build-parameters:
+      builder: grunt
+    requires:
+      - name: uaa_inventorymanagementapp
+      - name: inventorymanagementbackend_api
+        group: destinations
+        properties:
+          name: inventorymanagementbackend_api
+          url: '${url}'
+          forwardAuthToken: true
+    properties:
+      TENANT_HOST_PATTERN: "^(.*)-<Your back-end app URL without the protocol>"
+
+  - name: inventorymanagementbackend
+    type: nodejs
+    path: inventorymanagementbackend
+    provides:
+      - name: inventorymanagementbackend_api
+        properties:
+          url: '${default-url}'
+    requires:
+      - name: postgres-rdb
+        group: postgresql
+      - name: uaa_inventorymanagementapp
+    properties:
+      SAP_JWT_TRUST_ACL:
+       - clientid: "*"
+         identityzone: "*"
+
+resources:
+  - name: uaa_inventorymanagementapp
+    parameters:
+      path: ./xs-security.json
+      service-plan: application
+    type: com.sap.xs.uaa
+
+  - name: postgres-rdb
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service-plan: v9.4-dev
+      service: postgresql
