@@ -36,4 +36,4 @@ As a part of future development, the application will support functionality base
 
 Copyright (c) 2018 SAP SE or an SAP affiliate company. All rights reserved.
 
-This file is licensed under the Apache Software License, v. 2 except as noted otherwise in the [LICENSE file](./LICENSE.txt)
+This file is licensed under the SAP Sample Code License, except as noted otherwise in the [LICENSE file](./LICENSE.txt)
