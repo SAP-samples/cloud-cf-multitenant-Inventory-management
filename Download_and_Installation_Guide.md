@@ -48,7 +48,7 @@ In this section, we'll cover the steps that are needed deploy the sample multite
     ![Step Image](Readme_resources/images/image_7.png)
 
 
-6. Enter in the SAP Cloud Platform, Cloud Foundry environment details where you want to deploy the application. *The subaccount to which you deploy the application is referred to as the provider subaccount.*
+6. Enter in the SAP Cloud Platform, Cloud Foundry environment details where you want to deploy the application. The subaccount to which you deploy the application is referred to as the *provider subaccount.*
     ![Step Image](Readme_resources/images/image_8.png)
 
     The app deployment process starts. Once the app is deployed successfully, you'll see progress notifications on the top righthand corner.
@@ -90,7 +90,7 @@ In this section, we'll cover the steps that you need to do so that your applicat
 
 6.  In the **mtconfig/config.json** file, replace the **<`Your back-end app URL`>** placeholder with your backend app’s URL including the CF domain.
 
-    The url for your **onSubscription** parameter should now look something like this:
+    The URL for your **onSubscription** parameter should now look something like this:
 
     `https://inventorymanagementbackend.<CF Domain>/callback/v1.0/tenants/{tenantId}`
 

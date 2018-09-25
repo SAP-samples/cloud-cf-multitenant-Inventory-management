@@ -16,7 +16,7 @@ Follow the instructions below to deploy the application on SAP Cloud Platform in
 
 To install the app, you must clone the code from this [Github](https://github.com/SAP/cloud-cf-multitenant-Inventory-management) repository and deploy the application on your SAP Cloud Platform subaccount, running on the Cloud Foundry environment.
 
-For complete setup instructions, see the [Download and Installation](./Download_and_Installation_Guide) guide.
+For complete setup instructions, see the [Download and Installation](./Download_and_Installation_Guide.md) guide.
 
 ## Known Issues
 There are no known issues to this sample application. If you encounter any issues, please reach out to us through the details highlighted in the How to obtain support section
