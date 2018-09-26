@@ -1,9 +1,10 @@
-# Download and Installation Guide to Develop a SaaS Multitenant Business Application on SAP Cloud Platform in the Cloud Foundry Environment
+# How to Download and Install the Sample App
 
 ## Prerequisites
 
 * You understand the concepts of multitenancy in the Cloud Foundry environment; see [this blog](https://blogs.sap.com/2018/09/17/developing-multitenant-applications-on-sap-cloud-platform-cloud-foundry-environment/).
 * You understand the domain model (account structure) of SAP Cloud Platform; see [this blog](https://blogs.sap.com/2018/05/24/a-step-by-step-guide-to-the-unified-sap-cloud-platform-cockpit-experience/).
+* You know how to develop a Multi-Target Application (MTAR) on SAP Cloud Platform, Cloud Foundry environment; see [here](https://help.sap.com/viewer/977416d43cd74bdc958289038749100e/Latest/en-US/c6c4153d74af4df183bf5e66ff53109c.html?q=SAP%20Cloud%20Platform%20Cloud%20Foundry)
 
 ## Deploying the application to SAP Cloud Platform
 
