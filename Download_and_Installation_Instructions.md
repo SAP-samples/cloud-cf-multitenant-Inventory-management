@@ -154,8 +154,29 @@ In this section, we'll cover the steps that you need to do so that your applicat
 6.  Once the subscription process is completed, click on the **Go to Application** link to open the consumer app.
     ![Step Image](Readme_resources/images/image_14.png)
 
+7.  If you are unable to access the application and are observing the issue, as highlighted in the image, please do the following:
+    ![Step Image](Readme_resources/images/image_15.png)
 
-7. You can create additional consumer subaccounts and subscribe to the same sample multitenant business application.
+    * Go to SAP Cloud Platform Cockpit &rarr; Subaccount &rarr; Space and click on `Routes`.
+        ![Step Image](Readme_resources/images/image_16.png)
+    * Click on `New Route`
+        ![Step Image](Readme_resources/images/image_17.png)
+    * In the pop-up that appears enter the following details and click on `Save`.
+        ```
+        Domain: <Select the CF Domain of your tenant URL>
+        Host Name: <Enter the tenant app-host name>
+        Path: Empty
+        ```
+        ![Step Image](Readme_resources/images/image_18.png)
+    * Now search for the new route that you've created and click on Map Route action as shown in the image.
+        ![Step Image](Readme_resources/images/image_19.png)
+    * In the popup that appears, select the inventorymanagementui app (App Router app) and click on `Save`
+        ![Step Image](Readme_resources/images/image_20.png)
+    * Now that you're route is mapped to your application, you can navigate to the app using the tenant URL by clicking on the Launch Route action as shown in the image.
+        ![Step Image](Readme_resources/images/image_21.png)
+
+
+8. You can create additional consumer subaccounts and subscribe to the same sample multitenant business application.
 
    Add unique items to the product inventory in each consumer application and note that the stored information is isolated and secured per tenant.
 
