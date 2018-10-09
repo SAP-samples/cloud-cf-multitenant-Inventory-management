@@ -21,7 +21,7 @@ modules:
           url: '~{backend_app_url}'
           forwardAuthToken: true
     properties:
-      TENANT_HOST_PATTERN: "^(.*)-inventorymanagementui.<Your CF Endpoint>
+      TENANT_HOST_PATTERN: "^(.*)-inventorymanagementui.<Your CF Endpoint>"
 
   - name: inventorymanagementbackend
     type: nodejs
