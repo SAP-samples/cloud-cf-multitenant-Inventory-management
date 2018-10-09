@@ -18,18 +18,21 @@ modules:
         group: destinations
         properties:
           name: inventorymanagementbackend_api
-          url: '${url}'
+          url: '~{backend_app_url}'
           forwardAuthToken: true
     properties:
-      TENANT_HOST_PATTERN: "^(.*)-<Your back-end app URL without the protocol>"
+      TENANT_HOST_PATTERN: "^(.*)-inventorymanagementui.<Your CF Endpoint>
 
   - name: inventorymanagementbackend
     type: nodejs
     path: inventorymanagementbackend
+    parameters:
+      disk-quota: 256M
+      memory: 256M
     provides:
       - name: inventorymanagementbackend_api
         properties:
-          url: '${default-url}'
+          backend_app_url: '${default-url}'
     requires:
       - name: postgres-rdb
         group: postgresql
