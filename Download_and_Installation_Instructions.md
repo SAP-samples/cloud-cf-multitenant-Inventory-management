@@ -32,24 +32,29 @@ In this section, we'll cover the steps that are needed deploy the sample multite
         ![Step Image](Readme_resources/images/image_4.png)
 
 
+3. Using your WEB IDE Files explorer open **mta.yaml** file as shown in the image.
+        ![Step Image](Readme_resources/images/image_22.png)
 
-3. Now that you have cloned the repository, you need to build an MTAR:
+4. Add the CF Endpoint in your Tenant Host Pattern and save your changes.
+        ![Step Image](Readme_resources/images/image_23.png)
+
+5. Now that you have cloned the repository and made the necessary code changes, you need to build an MTAR:
 
     1. Locate the **inventoryManagementApp** project entry in the file structure.
     2. Right-click on the project entry and choose Build &rarr; Build
         ![Step Image](Readme_resources/images/image_5.png)
 
 
-4. Once the build is completed, you should see a new folder created in your file explorer:
+6. Once the build is completed, you should see a new folder created in your file explorer:
 
     ![Step Image](Readme_resources/images/image_6.png)
 
 
-5. Now, right click on the newly created *.mtar* file and choose **Deploy** &rarr; **Deploy to SAP Cloud Platform**
+7. Now, right click on the newly created *.mtar* file and choose **Deploy** &rarr; **Deploy to SAP Cloud Platform**
     ![Step Image](Readme_resources/images/image_7.png)
 
 
-6. Enter in the SAP Cloud Platform, Cloud Foundry environment details where you want to deploy the application. The subaccount to which you deploy the application is referred to as the *provider subaccount.*
+8. Enter in the SAP Cloud Platform, Cloud Foundry environment details where you want to deploy the application. The subaccount to which you deploy the application is referred to as the *provider subaccount.*
     ![Step Image](Readme_resources/images/image_8.png)
 
     The app deployment process starts. Once the app is deployed successfully, you'll see progress notifications on the top righthand corner.
