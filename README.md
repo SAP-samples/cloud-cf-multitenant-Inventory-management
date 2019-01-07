@@ -5,6 +5,8 @@
 This repository contains a sample reference application for developing and deploying a SaaS (software-as-a-service) multitenant business application on SAP Cloud Platform, Cloud Foundry environment.
 Follow the instructions below to deploy the application on SAP Cloud Platform in a subaccount that is configured for the Cloud Foundry environment.
 
+This branch has code that uses PSQL as the back-end DB. For HANA DB please click [here](https://github.com/SAP/cloud-cf-multitenant-Inventory-management/tree/node-hana).
+
 ## Requirements
 
 * [Cloud Foundry command line interface (CF CLI) tools](https://github.com/cloudfoundry/cli)
