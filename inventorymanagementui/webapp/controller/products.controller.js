@@ -67,7 +67,7 @@ sap.ui.define([
 		 * @param  {} isProductAvailable
 		 */
 		formatAvailabilityOption: function (isProductAvailable) {
-			if (isProductAvailable == true) {
+			if (isProductAvailable === "Yes") {
 				return "Available";
 			} else {
 				return "Not Available";

@@ -4,7 +4,7 @@ description: A multi-tenant enabled app to manage inventory
 version: 1.0.0
 
 modules:
-  - name: inventorymanagementui
+  - name: inventorymanagementuihana
     type: html5
     path: inventorymanagementui
     parameters:
@@ -13,7 +13,7 @@ modules:
     build-parameters:
       builder: grunt
     requires:
-      - name: uaa_inventorymanagementapp
+      - name: uaa_im_node_hana
       - name: inventorymanagementbackend_api
         group: destinations
         properties:
@@ -21,9 +21,9 @@ modules:
           url: '~{backend_app_url}'
           forwardAuthToken: true
     properties:
-      TENANT_HOST_PATTERN: "^(.*)-inventorymanagementui.<Your CF Endpoint>"
+      TENANT_HOST_PATTERN: "^(.*)-inventorymanagementuihana.<Your CF Endpoint>"
 
-  - name: inventorymanagementbackend
+  - name: inventorymanagementbackendhana
     type: nodejs
     path: inventorymanagementbackend
     parameters:
@@ -34,23 +34,34 @@ modules:
         properties:
           backend_app_url: '${default-url}'
     requires:
-      - name: postgres-rdb
-        group: postgresql
-      - name: uaa_inventorymanagementapp
+      - name: inventorymanagement-hdi-container
+      - name: uaa_im_node_hana
     properties:
       SAP_JWT_TRUST_ACL:
        - clientid: "*"
          identityzone: "*"
 
+  - name: inventorymanagement-hanadb
+    type: hdb
+    path: db
+    parameters:
+      memory: 256M
+      disk-quota: 256M
+    requires:
+      - name: inventorymanagement-hdi-container
+
 resources:
-  - name: uaa_inventorymanagementapp
+  - name: uaa_im_node_hana
     parameters:
       path: ./xs-security.json
       service-plan: application
     type: com.sap.xs.uaa
 
-  - name: postgres-rdb
-    type: org.cloudfoundry.managed-service
+  - name: inventorymanagement-hdi-container
     parameters:
-      service-plan: v9.4-dev
-      service: postgresql
+      config:
+         schema: PRODUCTS_SCHEMA1
+    properties:
+      hdi-container-name: '${service-name}'
+    type: com.sap.xs.hdi-container
+

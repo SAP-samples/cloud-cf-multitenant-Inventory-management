@@ -10,7 +10,7 @@ var xsenv = require('@sap/xsenv');
 var JWTStrategy = require('@sap/xssec').JWTStrategy;
 
 //Using a Database Interface file which has all the DB specific code
-var dbInterface = require('./dbConnector/dbInterface');
+var hdbext = require('@sap/hdbext');
 
 var indexRouter = require('./routes/index');
 
@@ -19,6 +19,10 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+
+//Configure HANA db
+var hanaOptions = xsenv.getServices({hana: { tag: 'hana' }}).hana;
+app.use(hdbext.middleware(hanaOptions));
 
 // Authenticate the access and add the authorization information to the request.
 // Uncomment the following code if you want to access your backend directly from the URL.
@@ -36,6 +40,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
@@ -50,20 +55,6 @@ app.use(function (err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
-});
-
-/**
- * Checks if products table exists and if it doesn't, it creates a new products table.
- * This method is invoked each time we deploy our code (cf push)
- * @param  {} function(result
- * @param  {} error
- */
-dbInterface.createTable(function(result, error){
-  if (error) {
-    console.log("Could not create products table");
-  } else {
-    console.log("Products Table either already exists or a new table has been created");
-  }
 });
 
 module.exports = app;

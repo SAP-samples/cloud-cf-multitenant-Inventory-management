@@ -1,7 +1,7 @@
 {
 	"appId": "<XS-App name goes here>",
-	"displayName": "Inventory Management App",
-	"description": "An app to manage your inventory",
+	"displayName": "Inventory Management HANA App",
+	"description": "An app to manage your inventory which uses HANA DB with Column Discrimination",
 	"category": "Provider XYZ",
 	"appUrls": {
 		"onSubscription": "https://<Your back-end app URL>/callback/v1.0/tenants/{tenantId}"

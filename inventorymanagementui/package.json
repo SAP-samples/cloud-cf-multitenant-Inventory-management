@@ -1,7 +1,7 @@
 {
   "name": "inventorymanagementui",
   "version": "1.0.0",
-  "description": "UI Module for the Inteventory management application",
+  "description": "UI Module for the inventory management application",
   "devDependencies": {
     "@sap/grunt-sapui5module-bestpractice-build": "^0.0.14"
   },

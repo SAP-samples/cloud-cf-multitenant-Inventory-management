@@ -1,5 +1,5 @@
 {
-	"xsappname": "inventorymanagementapp",
+	"xsappname": "inventorymanagementnodehana",
 	"tenant-mode": "shared",
 	"description": "Security profile of inventory management app",
 	"scopes": [{
