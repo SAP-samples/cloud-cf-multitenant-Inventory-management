@@ -35,7 +35,7 @@ In this section, we'll cover the steps that are needed deploy the sample multite
 3. Using your WEB IDE Files explorer open **mta.yaml** file as shown in the image.
         ![Step Image](Readme_resources/images/image_22.png)
 
-4. Add the CF Endpoint in your Tenant Host Pattern and save your changes.
+4. Add the CF Domain in your Tenant Host Pattern and save your changes.
         ![Step Image](Readme_resources/images/image_23.png)
 
 5. Now that you have cloned the repository and made the necessary code changes, you need to build an MTAR:
@@ -106,14 +106,14 @@ In this section, we'll cover the steps that you need to do so that your applicat
 
 8.  Make sure the **index.js** file contains the following code:
     ```javascript
-    router.put('/callback/v1.0/tenants/*', function (req, res) {
-        var consumerSubdomain = req.body.subscribedSubdomain;
-        var tenantAppURL = "https:\/\/" + consumerSubdomain + "-" + "<Your app-router app URL without the protocol>";
-        res.status(200).send(tenantAppURL);
-    });
+        router.put('/callback/v1.0/tenants/*', function (req, res) {
+            var consumerSubdomain = req.body.subscribedSubdomain;
+            var tenantAppURL = "https:\/\/" + consumerSubdomain + "-inventorymanagementui." + "<Your CF Domain>";
+            res.status(200).send(tenantAppURL);
+        });
     ```
 
-9. In the **index.js** file, replace the **<`Your app-router app`>** placeholder with your backend app’s URL including the CF domain. **Do not include the HTTP/HTTPS protocol.**
+9. In the **index.js** file, replace the **<`Your CF Domain`>** placeholder with your backend app’s URL including the CF domain. **Do not include the HTTP/HTTPS protocol.**
 
     Your **tenantAppURL** parameter should now look something like this:
 
