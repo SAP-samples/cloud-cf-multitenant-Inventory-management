@@ -113,7 +113,7 @@ In this section, we'll cover the steps that you need to do so that your applicat
     });
     ```
 
-9. In the **index.js** file, replace the **<`Your back-end app`>** placeholder with your backend app’s URL including the CF domain. **Do not include the HTTP/HTTPS protocol.**
+9. In the **index.js** file, replace the **<`Your app-router app`>** placeholder with your backend app’s URL including the CF domain. **Do not include the HTTP/HTTPS protocol.**
 
     Your **tenantAppURL** parameter should now look something like this:
 
