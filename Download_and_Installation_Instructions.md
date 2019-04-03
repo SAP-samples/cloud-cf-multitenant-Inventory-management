@@ -108,7 +108,7 @@ In this section, we'll cover the steps that you need to do so that your applicat
     ```javascript
     router.put('/callback/v1.0/tenants/*', function (req, res) {
         var consumerSubdomain = req.body.subscribedSubdomain;
-        var tenantAppURL = "https:\/\/" + consumerSubdomain + "-" + "<Your back-end app URL without the protocol>";
+        var tenantAppURL = "https:\/\/" + consumerSubdomain + "-" + "<Your app-router app URL without the protocol>";
         res.status(200).send(tenantAppURL);
     });
     ```
