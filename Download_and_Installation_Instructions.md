@@ -124,19 +124,19 @@ In this section, we'll cover the steps that you need to do so that your applicat
 11. Create a new service instance of the SaaS registry by executing this command:
 
     ```
-    cf cs saas-registry application mt-hw-app-lps-registry -c mtconfig/config.json
+    cf cs saas-registry application mt-im-app-lps-registry -c mtconfig/config.json
     ```
 
 12. Bind the app to the SaaS registry service instance by executing this command:
 
     ```
-    cf bs mt-hw-node-app mt-hw-app-lps-registry
+    cf bs inventorymanagementbackend mt-im-app-lps-registry
     ```
 
 13. Re-stage the app by executing this command:
 
     ```
-    cf restage mt-hw-node-app
+    cf restage inventorymanagementbackend
     ```
 
 ## Subscribe your consumer accounts to the deployed multitenant business application
