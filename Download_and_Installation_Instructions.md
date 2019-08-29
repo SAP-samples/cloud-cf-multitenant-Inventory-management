@@ -90,7 +90,7 @@ In this section, we'll cover the steps that you need to do so that your applicat
 
 4.  View the environment variables of your application by executing the following command in the cf CLI:
 
-    `cf env sample-saas-app`
+    `cf env inventorymanagementbackend`
 
 5. Copy the value of **VCAP_SERVICES.xsuaa.credentials.xsappname** to the **<`XS-App name goes here`>** placeholder in your **mtconfig/config.json** file.
 

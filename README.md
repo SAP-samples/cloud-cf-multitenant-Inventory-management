@@ -25,10 +25,6 @@ There are no known issues with this sample application. If you encounter any iss
 ## How to Obtain Support
 The purpose of this application is to illustrate the multitenancy capabilities of SAP Cloud Platform running on the Cloud Foundry environment. Thus, it is provided as-is with no official lines of support.
 
-However, if you run into any problems with the installation or would like additional information, please drop us an e-mail:
-* R, Hariprasauth  - hariprasauth.r@sap.com
-* TDS, Sandeep - sandeep.tds@sap.com
-
 ## To-Do (upcoming changes)
 
 As a part of our future development, we plan to add functionality to the application that is based on the role of the logged-in user.
