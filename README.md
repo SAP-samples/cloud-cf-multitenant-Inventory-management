@@ -31,6 +31,6 @@ As a part of our future development, we plan to add functionality to the applica
 
 ## License
 
-Copyright (c) 2018 SAP SE or an SAP affiliate company. All rights reserved.
+Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved.
 
 This file is licensed under the SAP Sample Code License, except as noted otherwise in the [LICENSE file](./LICENSE.txt)
