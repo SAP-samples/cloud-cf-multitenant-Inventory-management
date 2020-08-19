@@ -1,5 +1,9 @@
 # Developing a SaaS Multitenant Business Application on SAP Cloud Platform in the Cloud Foundry Environment
 
+## Warning
+
+This code sample may be deprecated in the near future in favor of a CAP based example.  Watch this space for further announcements.
+
 ## Description
 
 This repository contains a sample reference application for developing and deploying a SaaS (software-as-a-service) multitenant business application on SAP Cloud Platform, Cloud Foundry environment.
