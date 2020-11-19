@@ -9,7 +9,8 @@ SPDX-License-Identifier: Apache-2.0
 
 ## Warning
 
-This code sample may be deprecated in the near future in favor of a CAP based example.  Watch this space for further announcements.
+This code sample is deprecated in favor of a CAP based example.  
+See [cloud-cap-multitenancy](https://github.com/SAP-samples/cloud-cap-multitenancy)
 
 ## Description
 
