@@ -3,7 +3,8 @@ SPDX-FileCopyrightText: 2020 Andrew Lunde <andrew.lunde@sap.com>
 
 SPDX-License-Identifier: Apache-2.0
 -->
-[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/cloud-sfsf-benefits-ext)](https://api.reuse.software/info/github.com/SAP-samples/cloud-sfsf-benefits-ext)
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/cloud-cf-multitenant-Inventory-management)](https://api.reuse.software/info/github.com/SAP-samples/cloud-cf-multitenant-Inventory-management)
+
 
 # Developing a SaaS Multitenant Business Application on SAP Business Technology Platform in the Cloud Foundry Environment
 
